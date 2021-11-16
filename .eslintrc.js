@@ -8,6 +8,7 @@ module.exports = {
     parser: 'babel-eslint',
   },
   rules: {
+    'no-unused-vars': 1,
     // 有默认值的参数必须放在最后
     'default-param-last': 'warn',
     // 禁止方向错误的 for 循环
