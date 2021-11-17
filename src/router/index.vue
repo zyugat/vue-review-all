@@ -11,13 +11,11 @@
       Api-query
     </router-link>
     <br />
-    <hr />
     <h2>命名视图</h2>
     <router-link to="/nameLeft">left</router-link>
     ——————
     <router-link to="/nameRight">Right</router-link>
     <br />
-    <hr />
   </div>
   <div id="show">
     <router-view />
