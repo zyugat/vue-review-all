@@ -1,4 +1,3 @@
 module.exports = {
-  outputDir: 'dist',
-  publicPath: '/vue-review-all/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/vue-review-all/' : '/',
 }
