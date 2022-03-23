@@ -2,6 +2,7 @@
   "name": "vue-review-all",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://zyugat.github.io/vue-review-all",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
