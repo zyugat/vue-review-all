@@ -16,8 +16,8 @@ jobs:
           yarn build
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        uses: JamesIves/github-pages-deploy-action@v3
         with:
-          GITHUB_TOKEN: ${ secrets.ACTION_TOKEN }
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           branch: gh-pages
           folder: build
