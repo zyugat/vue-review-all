@@ -15,8 +15,6 @@ module.exports = {
     'for-direction': 'warn',
     // const 禁止重新赋值
     'no-const-assign': 'warn',
-    // 不使用debugger
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warm' : 'off',
     // 禁止 if else 的条件判断中出现重复的条件
     'no-dupe-else-if': 'warn',
     // 禁止重复导入模块
