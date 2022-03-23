@@ -6,21 +6,15 @@ on:
       - main
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # 我们选择使用最新的ubuntu系统
     steps:
-      - name: Checkout 🛎️
-        uses: zyugat/vue-review-all@main
-        with:
-          persist-credentials: false
+    - name: checkout
+      uses: actions/checkout@master # 将代码拷贝到虚机中
 
-      - name: Install and Build 🔧
-        run: |
-          yarn
-          yarn build
-      - name: Deploy 🚀
-        uses: zyugat/vue-review-all@main
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: dist
-          CLEAN: true
+    - name: buildAndDeploy
+      uses: JamesIves/github-pages-deploy-action@master 
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # 使用刚新建的secret
+        BRANCH: actions # 存放产物的分支名称
+        FOLDER: dist # 存放build后产物的目录
+        BUILD_SCRIPT: yarn && yarn build # 执行的命令
